@@ -1,0 +1,22 @@
+type Query {
+    customerShippedOrders
+    (
+        customer_id : Int @doc (description : "Customer Id")
+    ): CustomerShippedOrders
+    @resolver (class : "CodeTheatres\\CustomerShippedOrdersGraphQl\\Model\\OrdersResolver")
+}
+
+type CustomerShippedOrders @doc (description : "Order Information"){
+    items : [CustomerShippedOrder] @doc (description : "An array of orders")
+}
+
+type CustomerShippedOrder @doc (description : "Order shipped for a specific customer"){
+    order_id : Int @doc (description : "Order Id")
+    created_at : String @doc (description : "Created At")
+    website_id : Int @doc (description : "Website Id")
+    store_id : Int @doc (description : "Store Id")
+    customer_id : Int @doc (description : "Customer Id")
+    customer_name : String @doc (description : "Customer Name")
+    increment_id : String @doc (description : "Increment Id")
+    grand_total : String @doc (description : "Grand Total")
+}
