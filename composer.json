@@ -11,7 +11,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/arijit-de/customer-shipped-orders-graphql.git"
+            "url": "https://github.com/codetheatres/customer-shipped-orders-graphql.git"
         }
     ],
     "authors": [
